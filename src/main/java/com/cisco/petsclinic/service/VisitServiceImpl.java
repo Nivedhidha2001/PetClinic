@@ -21,7 +21,7 @@ public class VisitServiceImpl implements VisitService{
 
 	@Override
 	public Visit getVisitById(Integer id) {
-		return repository.getById(id);
+		 return repository.findById(id).orElse(null);
 	}
 
 	@Override
